@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# DAS data
+*.sgy
+*.segy
+*.h5
+
 # Distribution / packaging
 .Python
 build/
