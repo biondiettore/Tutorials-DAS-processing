@@ -1,0 +1,3 @@
+[submodule "external/EQNet"]
+	path = external/EQNet
+	url = https://github.com/AI4EPS/EQNet.git
