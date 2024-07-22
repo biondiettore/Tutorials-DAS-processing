@@ -132,8 +132,9 @@ def phasenet_das(das_data, timestamp, ev_id, dt):
     picks = predict(meta)["picks"]
     picks = picks[0] ## batch size = 1
     picks = pd.DataFrame.from_dict(picks, orient="columns")
-    with torch.cuda.device(args.device):
-        torch.cuda.empty_cache()
+    if "cuda" in args.device:
+        with torch.cuda.device(args.device):
+            torch.cuda.empty_cache()
     return picks
 
 
